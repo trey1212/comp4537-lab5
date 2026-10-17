@@ -1,7 +1,7 @@
 const mysql = require("mysql2/promise")
 
 /**
- * Manages data being created, inserted, or selected in the database
+ * Manages data queries to interact with the database
  */
 class DatabaseManager {
     /**
