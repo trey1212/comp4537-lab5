@@ -1,4 +1,5 @@
 const mysql = require("mysql2/promise")
+const msg = require('./messages.js')
 
 /**
  * Manages data queries to interact with the database
@@ -12,6 +13,7 @@ class DatabaseManager {
     constructor(adminConfig, readerConfig) {
         this.adminConfig = adminConfig;
         this.readerConfig = readerConfig;
+        this.msg = msg;
     }
 
     // Creates the patient table and inserts data into it (admin privileges)
@@ -37,7 +39,7 @@ class DatabaseManager {
         await connection.query(insertPatientData);
 
         await connection.end();
-        return { message: "Table created and data inserted successfully." };
+        return msg.POST_SUCCESS;
     }
 
     // Gets the data of desired patient (reader and up privileges)
@@ -50,3 +52,5 @@ class DatabaseManager {
         return rows;
     }
 }
+
+module.exports = DatabaseManager;

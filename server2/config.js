@@ -2,15 +2,15 @@ const DB_CONFIG = {
     // Privileged account that can INSERT patient records
     admin: {
         host: 'localhost',
-        user: 'clinic_admin',       
+        user: 'admin',       
         password: 'admin_password123',
         database: 'lab5_clinic'
     },
     // Readonly account that can SELECT patient records
-    user: {
+    reader: {
         host: 'localhost',
-        user: 'clinic_reader',      
-        password: 'user_password123',
+        user: 'reader',      
+        password: 'reader_password123',
         database: 'lab5_clinic'
     },
     port: 8080
