@@ -1,4 +1,4 @@
-const API_URL = "lab5server2-hjacdrdtasgeaeeq.canadacentral-01.azurewebsites.net";
+const API_URL = "https://lab5server2-hjacdrdtasgeaeeq.canadacentral-01.azurewebsites.net/api/v1/sql/";
 
 class PatientApp {
 
