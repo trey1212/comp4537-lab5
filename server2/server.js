@@ -53,7 +53,7 @@ class Router {
             const result = await this.dbManager.createRecords();
             this.sendResponse(res, 200, result);
         } catch (error) {
-            this.sendResponse(res, 500, msg.DB_ACCESS_DENIED);
+            this.sendResponse(res, 500, "Real Error: " + error.message);
         }
     }
 
@@ -73,7 +73,7 @@ class Router {
             const rows = await this.dbManager.runReaderQuery(sqlString);
             this.sendResponse(res, 200, rows);
         } catch (error) {
-            this.sendResponse(res, 400, msg.DB_ACCESS_DENIED);
+            this.sendResponse(res, 400, "Real Error: " + error.message);
         }
     }
 
