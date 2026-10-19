@@ -1,16 +1,16 @@
 const DB_CONFIG = {
     // Privileged account that can INSERT patient records
     admin: {
-        host: 'localhost',
+        host: 'lab5-db.mysql.database.azure.com',
         user: 'admin',       
-        password: 'admin_password123',
+        password: 'process.env.ADMIN_PASSWORD',
         database: 'lab5_clinic'
     },
     // Readonly account that can SELECT patient records
     reader: {
-        host: 'localhost',
+        host: 'lab5-db.mysql.database.azure.com',
         user: 'reader',      
-        password: 'reader_password123',
+        password: 'process.env.READER_PASSWORD',
         database: 'lab5_clinic'
     },
     port: process.env.PORT || 8080
