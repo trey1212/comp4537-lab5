@@ -5,7 +5,7 @@ const DB_CONFIG = {
         user: 'admin',       
         password: process.env.ADMIN_PASSWORD,
         database: 'lab5_clinic',
-        ssl: true
+        ssl: { rejectUnauthorized: false }
     },
     // Readonly account that can SELECT patient records
     reader: {
@@ -13,7 +13,7 @@ const DB_CONFIG = {
         user: 'reader',      
         password: process.env.READER_PASSWORD,
         database: 'lab5_clinic',
-        ssl: true
+        ssl: { rejectUnauthorized: false }
     },
     port: process.env.PORT || 8080
 };
