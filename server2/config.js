@@ -13,7 +13,7 @@ const DB_CONFIG = {
         password: 'reader_password123',
         database: 'lab5_clinic'
     },
-    port: 8080
+    port: process.env.PORT || 8080
 };
 
 module.exports = DB_CONFIG;
