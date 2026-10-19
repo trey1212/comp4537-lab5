@@ -7,8 +7,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <h1>Patient Database</h1>
+    
     <div id ="container">
-        <button></button>
+        <button id="insertButton">
+            Insert Patients
+        </button>
+
+        <p>Enter SQL Query:</p>
+    <textarea id="sqlQuery" rows="5" cols="45">SELECT * FROM patient</textarea>
+
+    <br>
+
+    <button id="queryButton">Submit Query</button>
+
+    <h2>Server Response:</h2>
+    <pre id="response"></pre>
     </div>
+
+    <script src="js/messages.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
