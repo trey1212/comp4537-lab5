@@ -4,14 +4,16 @@ const DB_CONFIG = {
         host: 'lab5-db.mysql.database.azure.com',
         user: 'admin',       
         password: process.env.ADMIN_PASSWORD,
-        database: 'lab5_clinic'
+        database: 'lab5_clinic',
+        ssl: true
     },
     // Readonly account that can SELECT patient records
     reader: {
         host: 'lab5-db.mysql.database.azure.com',
         user: 'reader',      
         password: process.env.READER_PASSWORD,
-        database: 'lab5_clinic'
+        database: 'lab5_clinic',
+        ssl: true
     },
     port: process.env.PORT || 8080
 };
